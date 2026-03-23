@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: secure-library-management-api
+
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/secure_library_api
+    username: postgres
+    password: admin1234
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      format-sql: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+security:
+  jwt:
+    secret-key: MY_SUPER_SECRET_KEY_123456789_123456789
+    expiration: 3600000  # 24 hours
+
+
+
